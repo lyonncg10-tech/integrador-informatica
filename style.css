@@ -1,0 +1,296 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: white;
+    color: #333;
+}
+
+
+header {
+    background-color: #0b2d4d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 15px 0;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #f58220;
+}
+
+
+.inicio {
+    background-color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.inicio h2 {
+    color: #0b2d4d;
+}
+
+.inicio p:first-child {
+    color: #f58220;
+    font-weight: bold;
+}
+
+
+button {
+    background-color: #f58220;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0b2d4d;
+}
+
+
+.Funcionamento {
+    background-color: #f5f5f5;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-top: 4px solid #f58220;
+}
+
+.Funcionamento h2 {
+    color: #0b2d4d;
+}
+
+
+.pagina {
+    background-color: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 2px solid #0b2d4d;
+}
+
+.pagina h2 {
+    color: #0b2d4d;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #0b2d4d;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0b2d4d;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.pagina button {
+    margin-top: 20px;
+}
+
+.mensagem {
+    min-height: 20px;
+    margin: 14px 0 0;
+    font-weight: bold;
+}
+
+.mensagem:empty {
+    display: none;
+}
+
+.mensagem.sucesso {
+    color: #26734d;
+}
+
+.mensagem.erro {
+    color: #b42318;
+}
+
+.relatos {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.relatos h2 {
+    color: #0b2d4d;
+}
+
+.item {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #f58220;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.item h3 {
+    color: #0b2d4d;
+    margin-top: 0;
+}
+
+.item small {
+    background-color: #f58220;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.item .feito {
+    background-color: #0b2d4d;
+    color: white;
+}
+
+.item-novo {
+    border-left-color: #0b2d4d;
+}
+
+.data-relato {
+    margin: 10px 0;
+}
+
+.aviso-admin {
+    background-color: #fff3cd;
+    border-left: 4px solid #f58220;
+    padding: 12px;
+}
+
+.item-admin select {
+    margin: 8px 10px 8px 0;
+    padding: 9px;
+    border: 1px solid #0b2d4d;
+    border-radius: 5px;
+}
+
+.botao-excluir {
+    background-color: #b42318;
+}
+
+.botao-excluir:hover {
+    background-color: #821a13;
+}
+
+footer {
+    background-color: #0b2d4d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body > main {
+    flex: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+nav a[href="admin.html"] {
+    margin-left: 10px;
+}
+
+
+
+
+nav,
+
+.nav-links-principais {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-links-acesso {
+    grid-column: 3;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.nav-links-principais a,
+.nav-links-acesso a {
+    margin: 0 10px;
+    padding: 6px 2px;
+}
+
+nav .nav-links-acesso a[href="admin.html"] {
+    margin-left: 0;
+    border-left: 0;
+}
+
+@media (max-width: 760px) {
+    nav {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 10px;
+    }
+
+    .nav-links-principais {
+        grid-column: 1;
+        justify-self: center;
+    }
+
+    .nav-links-acesso {
+        grid-column: 1;
+        justify-self: end;
+        padding-left: 0;
+        border-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links-principais,
+    .nav-links-acesso {
+        gap: 4px;
+    }
+
+    .nav-links-principais a,
+    .nav-links-acesso a {
+        margin: 0 5px;
+        font-size: 0.9rem;
+    }
+}

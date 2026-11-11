@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac Resolve</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Senac Resolve</h1>
+        <nav>
+            <div class="nav-links-principais" role="group" aria-label="Navegação do site">
+                <a href="index.html">Início</a>
+                <a href="relatar.html">Relatar</a>
+                <a href="relatos.html">Relatos</a>
+            </div>
+            <div class="nav-links-acesso" role="group" aria-label="Área de acesso">
+                <a href="admin.html">Administrador</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina principal">
+            <h2>Novo relato</h2>
+            <p>Preencha os campos abaixo para informar um problema.</p>
+
+            <form id="form-relato">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" maxlength="80" required>
+
+                <label for="problema">Qual o seu problema?</label>
+                <input type="text" id="problema" name="problema" maxlength="100" required>
+
+                <label for="local">Onde aconteceu?</label>
+                <input type="text" id="local" name="local" maxlength="100" required>
+
+                <label for="descricao">O que aconteceu?</label>
+                <textarea id="descricao" name="descricao" rows="6" maxlength="500" required></textarea>
+
+                <button type="submit">Fazer um relato</button>
+                <p id="mensagem-formulario" class="mensagem" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Senac Resolve</p>
+        <p>Projeto desenvolvido por alunos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
